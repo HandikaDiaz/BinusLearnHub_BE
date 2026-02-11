@@ -26,11 +26,11 @@ async function run() {
 run().catch(console.dir);
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 app.use(cors({
     origin: [
-        "http://localhost:5173",
+        "http://localhost:3000",
         process.env.FRONTEND_WEB_URL as string,
         process.env.FRONTEND_MOBILE_URL as string,
     ],
