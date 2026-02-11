@@ -29,11 +29,11 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors({
-    // origin: [
-    //     "http://localhost:5173",
-    //     process.env.FRONTEND_WEB_URL as string,
-    //     process.env.FRONTEND_MOBILE_URL as string,
-    // ],
+    origin: [
+        "http://localhost:5173",
+        process.env.FRONTEND_WEB_URL as string,
+        process.env.FRONTEND_MOBILE_URL as string,
+    ],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
